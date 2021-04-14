@@ -5,6 +5,7 @@ Taken from https://mutcd.fhwa.dot.gov/services/publications/fhwaop02084/index.ht
 - Warning Signs 			= "warn"	(Yellow)
 - Railroad Signs 			= "rail"	(Yellow/White)
 - Speed Limit Signs 		= "spdl"	(White)
+- State Laws                          = "stat"    (White/Black)
 - Regulatory Signs 		= "regs"	(Red/White)
 - Green Guide Signs 		= "guid"	(Green)
 - Route Signes 			= "rout"	(Varies)

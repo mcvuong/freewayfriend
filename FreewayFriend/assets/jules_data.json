@@ -13,7 +13,7 @@
         {"id":105,    "lat": 43.12362998732095, "lon": -77.64986763736644,    "type":"guid",    "value":"Exit 17 to the Right"}
         
         {"id":106,    "lat": 43.1240392, "lon": -77.6507519,    "type":"guid",    "value":"Exit 18A-B"}
-        {"id":107,    "lat": 43.1240392, "lon": -77.6507519,    "type":"guid",    "value":"204 Brooks Ave Airport 1/2 Mile"}
+        {"id":107,    "lat": 43.1240392, "lon": -77.6507519,    "type":"guid",    "value":"204 Brooks Avenue Airport 1/2 Mile"}
         
         {"id":108,    "lat":43.1251308, "lon":-77.6535842,    "type":"guid",    "value":"Town Of Gates"}
         {"id":109,    "lat":43.1256894, "lon":-77.6552748,    "type":"inter",    "value":"North Interstate 390"}
@@ -22,11 +22,19 @@
         {"id":111,    "lat":43.1264544, "lon":-77.6567815 ,    "type":"spdl",    "value":"State Speed Limit 55"}
         
         {"id":112,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Exit 18B"}
-        {"id":113,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"204 Brooks Ave Airport Next Right"}
-        {"id":114,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Exit 18A Brooks Ave East Exiting Right"}
-        {"id":114,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Brooks Ave East Exiting Right"}
-        
+        {"id":113,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"204 Brooks Avenue Airport Next Right"}
+        {"id":114,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Exit 18A"}
+        {"id":115,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Brooks Avenue East Exiting Right"}
        
-       {"id":113,    "lat": 43.1282254, "lon":-77.6589415,    "type":"warn",    "value":"Exit 40 Mile Per Hour"}
+       {"id":116,    "lat": 43.1282254, "lon":-77.6589415,    "type":"warn",    "value":"Exit 40 Mile Per Hour"}
+       
+       {"id":117,    "lat":43.1290565, "lon": -77.6595922,  "type":"guid",    "value":"Exit 18A to the Right"}
+       
+       {"id":118,    "lat":43.1298492, "lon": -77.6601191,  "type":"guid",    "value":"Exit 18B"}
+       {"id":119,    "lat":43.1298492, "lon": -77.6601191,  "type":"guid",    "value":"204 Brooks Avenue Airport to the Right"}
+       
+       {"id":120,    "lat":43.1305127, "lon":-77.660449,    "type":"warn",    "value":"Exit 20 Miles Per Hour"}
+       {"id":121,    "lat":43.1305127, "lon":-77.660449,    "type":"guid",    "value":"Brooks Avenue"}
+       {"id":122,    "lat":43.1305127, "lon":-77.660449,    "type":"stat",    "value":"State Law License Suspended After Two Work Zone Speeding Tickets"}
 	]
 }
