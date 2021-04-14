@@ -31,19 +31,18 @@
 		{"id":317,	"lat":43.1651826,	"lon":-77.6827628, "dir": "N",	"type":"warn", "value":"Entering roadway merge from right"},
 		
 		{"id":318,	"lat":43.1679224,	"lon":-77.6828701, "dir": "N",	"type":"guid", "value":"390 North"},
-		{"id":319,	"lat":43.1679224,	"lon":-77.6828701, "dir": "N",	"type":"guid", "value":"390 North"},
 		
-		{"id":320,	"lat":43.1693663,	"lon":-77.6828815, "dir": "N",	"type":"regs", "value":"State Speed Limit: 55"},
+		{"id":319,	"lat":43.1693663,	"lon":-77.6828815, "dir": "N",	"type":"regs", "value":"State Speed Limit: 55"},
 		
-		{"id":321,	"lat":43.1703855,	"lon":-77.6829735, "dir": "N",	"type":"guid", "value":"Right exit 22: Lexington Ave 1/2 Mile Exit Only"},
+		{"id":320,	"lat":43.1703855,	"lon":-77.6829735, "dir": "N",	"type":"guid", "value":"Right exit 22: Lexington Ave 1/2 Mile Exit Only"},
 		
-		{"id":322,	"lat":43.1729984,	"lon":-77.6830844, "dir": "N",	"type":"guid", "value":"Erie Canal"},
-		{"id":323,	"lat":43.1729984,	"lon":-77.6830844, "dir": "N",	"type":"warn", "value":"Bridge joint"},
+		{"id":321,	"lat":43.1729984,	"lon":-77.6830844, "dir": "N",	"type":"guid", "value":"Erie Canal"},
+		{"id":322,	"lat":43.1729984,	"lon":-77.6830844, "dir": "N",	"type":"warn", "value":"Bridge joint"},
 		
-		{"id":324,"lat":43.1746132,	"lon":-77.6831514, "dir": "N",	"type":"guid", "value":"Adopt-a-Highway Program Next 3.5 Miles, The Employees of Enterprise Rent-A-Car"},
+		{"id":323,"lat":43.1746132,	"lon":-77.6831514, "dir": "N",	"type":"guid", "value":"Adopt-a-Highway Program Next 3.5 Miles, The Employees of Enterprise Rent-A-Car"},
 		
-		{"id":325,"lat":43.1749664,	"lon":-77.6831646, "dir": "N",	"type":"guid", "value":"Right exit 22: Lexington Ave Exit Only"},
+		{"id":324,"lat":43.1749664,	"lon":-77.6831646, "dir": "N",	"type":"guid", "value":"Right exit 22: Lexington Ave Exit Only"},
 		
-		{"id":326,"lat":43.1767494,	"lon":-77.6832243, "dir": "N",	"type":"guid", "value":"Exit 22"}
+		{"id":325,"lat":43.1767494,	"lon":-77.6832243, "dir": "N",	"type":"guid", "value":"Exit 22"}
 	]
 }
