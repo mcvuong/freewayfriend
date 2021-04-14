@@ -41,7 +41,7 @@
 		{"id":027,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"15A South East Henrietta Road 15 West Henrietta Road Exit Only"},
 
 		{"id":028,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"Exit 16B"},
-		{"id":029,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"15A North East Henrietta Road Rochester"},		
+		{"id":029,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"15A North East Henrietta Road Rochester"}		
 
 	]
 }
