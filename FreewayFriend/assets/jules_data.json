@@ -1,6 +1,7 @@
 {
 	"data" : [
-		{"id":101,	"lat":43.11920,	"lon":-77.63881,	"type":"guid", "value":"Exit 17 383 RIT Scottsville Road in 1/2 a Mile"},
+		{"id":100,	"lat":43.11920,	"lon":-77.63881,	"type":"guid", "value":"Exit 17"},
+        {"id":101,    "lat":43.11920,    "lon":-77.63881,    "type":"guid", "value":"383 RIT Scottsville Road in 1/2 a Mile"},
 		
         {"id":102,    "lat":43.12410655449519,    "lon": -77.6463317557775,    "type":"guid",    "value":"383 RIT Scottsville Road Right Lane"}
        
@@ -16,7 +17,7 @@
         {"id":107,    "lat": 43.1240392, "lon": -77.6507519,    "type":"guid",    "value":"204 Brooks Avenue Airport 1/2 Mile"}
         
         {"id":108,    "lat":43.1251308, "lon":-77.6535842,    "type":"guid",    "value":"Town Of Gates"}
-        {"id":109,    "lat":43.1256894, "lon":-77.6552748,    "type":"inter",    "value":"North Interstate 390"}
+        {"id":109,    "lat":43.1256894, "lon":-77.6552748,    "type":"guid",    "value":"North Interstate 390"}
         
         
         {"id":111,    "lat":43.1264544, "lon":-77.6567815 ,    "type":"spdl",    "value":"State Speed Limit 55"}

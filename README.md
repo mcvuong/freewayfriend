@@ -12,7 +12,6 @@ Taken from https://mutcd.fhwa.dot.gov/services/publications/fhwaop02084/index.ht
 - Pedestrian Signs 		= "peds"	(Lime/White)
 - Parking Signs 			= "park"	(Varies)
 - Rest Area Signs 		        = "rest"	(Blue)
-- Interstate sign                     = "inter" (Blue/Red)
 - Motorist Service Signs 	= "serv"	(Blue)
 - Recreation Signs 		= "recr"	(Brown)
 
