@@ -8,10 +8,10 @@ Taken from https://mutcd.fhwa.dot.gov/services/publications/fhwaop02084/index.ht
 - State Laws                          = "stat"    (White/Black)
 - Regulatory Signs 		= "regs"	(Red/White)
 - Green Guide Signs 		= "guid"	(Green)
-- Route Signes 			= "rout"	(Varies)
+- Route Signs 			= "rout"	(Varies)
 - Pedestrian Signs 		= "peds"	(Lime/White)
 - Parking Signs 			= "park"	(Varies)
-- Rest Area Signs 		        = "rest"	(Blue)
+- Rest Area Signs 		= "rest"	(Blue)
 - Motorist Service Signs 	= "serv"	(Blue)
 - Recreation Signs 		= "recr"	(Brown)
 
@@ -28,8 +28,6 @@ Here are some links related to the Freeway Friend:
 - 2 = Ryan
 - 3 = Mary
 - 4 = Rui
-
-
 
 ## Resources
 
