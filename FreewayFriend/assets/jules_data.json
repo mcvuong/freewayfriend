@@ -1,41 +1,41 @@
 {
 	"data" : [
-		{"id":100,	"lat":43.11920,	"lon":-77.63881,	"type":"guid", "value":"Exit 17"},
-        {"id":101,    "lat":43.11920,    "lon":-77.63881,    "type":"guid", "value":"383 RIT Scottsville Road in 1/2 a Mile"},
+		{"id":100,	"lat":43.11920,	"lon":-77.63881,	"dir":"N",	"type":"guid", "value":"Exit 17"},
+        {"id":101,    "lat":43.11920,    "lon":-77.63881,    "dir":"N",	"type":"guid", "value":"383 RIT Scottsville Road in 1/2 a Mile"},
 		
-        {"id":102,    "lat":43.12410655449519,    "lon": -77.6463317557775,    "type":"guid",    "value":"383 RIT Scottsville Road Right Lane"},
+        {"id":102,    "lat":43.12410655449519,    "lon": -77.6463317557775,    "dir":"N",	"type":"guid",    "value":"383 RIT Scottsville Road Right Lane"},
        
-       {"id":102,	"lat":43.12410655449519,	"lon":-77.6463317557775,	"type":"guid",	"value":"383 RIT Scottsville Road Right Lane"},
+       {"id":102,	"lat":43.12410655449519,	"lon":-77.6463317557775,	"dir":"N",	"type":"guid",	"value":"383 RIT Scottsville Road Right Lane"},
         
-        {"id":103,    "lat":43.12235210982107,    "lon": -77.64744580807944,    "type":"warn",    "value":"Ramp 25 Mile Per Hour"},
+        {"id":103,    "lat":43.12235210982107,    "lon": -77.64744580807944,    "dir":"N",	"type":"warn",    "value":"Ramp 25 Mile Per Hour"},
         
-        {"id":104,    "lat":43.12316797031181, "lon":-77.64896105073876,    "type":"warn",    "value":"Exit 25 Mile Per Hour"},
+        {"id":104,    "lat":43.12316797031181, "lon":-77.64896105073876,    "dir":"N",	"type":"warn",    "value":"Exit 25 Mile Per Hour"},
         
-        {"id":105,    "lat": 43.12362998732095, "lon": -77.64986763736644,    "type":"guid",    "value":"Exit 17 to the Right"},
+        {"id":105,    "lat": 43.12362998732095, "lon": -77.64986763736644,    "dir":"N",	"type":"guid",    "value":"Exit 17 to the Right"},
         
-        {"id":106,    "lat": 43.1240392, "lon": -77.6507519,    "type":"guid",    "value":"Exit 18A-B"},
-        {"id":107,    "lat": 43.1240392, "lon": -77.6507519,    "type":"guid",    "value":"204 Brooks Avenue Airport 1/2 Mile"},
+        {"id":106,    "lat": 43.1240392, "lon": -77.6507519,    "dir":"N",	"type":"guid",    "value":"Exit 18A-B"},
+        {"id":107,    "lat": 43.1240392, "lon": -77.6507519,    "dir":"N",	"type":"guid",    "value":"204 Brooks Avenue Airport 1/2 Mile"},
         
-        {"id":108,    "lat":43.1251308, "lon":-77.6535842,    "type":"guid",    "value":"Town Of Gates"},
-        {"id":109,    "lat":43.1256894, "lon":-77.6552748,    "type":"guid",    "value":"North Interstate 390"},
+        {"id":108,    "lat":43.1251308, "lon":-77.6535842,    "dir":"N",	"type":"guid",    "value":"Town Of Gates"},
+        {"id":109,    "lat":43.1256894, "lon":-77.6552748,    "dir":"N",	"type":"guid",    "value":"North Interstate 390"},
         
         
-        {"id":111,    "lat":43.1264544, "lon":-77.6567815 ,    "type":"spdl",    "value":"State Speed Limit 55"},
+        {"id":111,    "lat":43.1264544, "lon":-77.6567815 ,    "dir":"N",	"type":"spdl",    "value":"State Speed Limit 55"},
         
-        {"id":112,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Exit 18B"},
-        {"id":113,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"204 Brooks Avenue Airport Next Right"},
-        {"id":114,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Exit 18A"},
-        {"id":115,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Brooks Avenue East Exiting Right"},
+        {"id":112,    "lat":43.1273566, "lon":-77.6580468 ,    "dir":"N",	"type":"guid",    "value":"Exit 18B"},
+        {"id":113,    "lat":43.1273566, "lon":-77.6580468 ,    "dir":"N",	"type":"guid",    "value":"204 Brooks Avenue Airport Next Right"},
+        {"id":114,    "lat":43.1273566, "lon":-77.6580468 ,    "dir":"N",	"type":"guid",    "value":"Exit 18A"},
+        {"id":115,    "lat":43.1273566, "lon":-77.6580468 ,    "dir":"N",	"type":"guid",    "value":"Brooks Avenue East Exiting Right"},
        
-       {"id":116,    "lat": 43.1282254, "lon":-77.6589415,    "type":"warn",    "value":"Exit 40 Mile Per Hour"},
+       {"id":116,    "lat": 43.1282254, "lon":-77.6589415,    "dir":"N",	"type":"warn",    "value":"Exit 40 Mile Per Hour"},
        
-       {"id":117,    "lat":43.1290565, "lon": -77.6595922,  "type":"guid",    "value":"Exit 18A to the Right"},
+       {"id":117,    "lat":43.1290565, "lon": -77.6595922,  "dir":"N",	"type":"guid",    "value":"Exit 18A to the Right"},
        
-       {"id":118,    "lat":43.1298492, "lon": -77.6601191,  "type":"guid",    "value":"Exit 18B"},
-       {"id":119,    "lat":43.1298492, "lon": -77.6601191,  "type":"guid",    "value":"204 Brooks Avenue Airport to the Right"},
+       {"id":118,    "lat":43.1298492, "lon": -77.6601191,  "dir":"N",	"type":"guid",    "value":"Exit 18B"},
+       {"id":119,    "lat":43.1298492, "lon": -77.6601191,  "dir":"N",	"type":"guid",    "value":"204 Brooks Avenue Airport to the Right"},
        
-       {"id":120,    "lat":43.1305127, "lon":-77.660449,    "type":"warn",    "value":"Exit 20 Miles Per Hour"},
-       {"id":121,    "lat":43.1305127, "lon":-77.660449,    "type":"guid",    "value":"Brooks Avenue"},
-       {"id":122,    "lat":43.1305127, "lon":-77.660449,    "type":"stat",    "value":"State Law License Suspended After Two Work Zone Speeding Tickets"}
+       {"id":120,    "lat":43.1305127, "lon":-77.660449,    "dir":"N",	"type":"warn",    "value":"Exit 20 Miles Per Hour"},
+       {"id":121,    "lat":43.1305127, "lon":-77.660449,    "dir":"N",	"type":"guid",    "value":"Brooks Avenue"},
+       {"id":122,    "lat":43.1305127, "lon":-77.660449,    "dir":"N",	"type":"stat",    "value":"State Law License Suspended After Two Work Zone Speeding Tickets"}
 	]
 }
