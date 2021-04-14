@@ -18,9 +18,15 @@
         {"id":108,    "lat":43.1251308, "lon":-77.6535842,    "type":"guid",    "value":"Town Of Gates"}
         {"id":109,    "lat":43.1256894, "lon":-77.6552748,    "type":"inter",    "value":"North Interstate 390"}
         
-        {"id":110,    "lat":43.126503, "lon": -77.6568616 ,    "type":" ",    "value":""}
+        
         {"id":111,    "lat":43.1264544, "lon":-77.6567815 ,    "type":"spdl",    "value":"State Speed Limit 55"}
-        {"id":112,    "lat": , "lon":,    "type":" ",    "value":""}
-        {"id":113,    "lat": , "lon":,    "type":" ",    "value":""}
+        
+        {"id":112,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Exit 18B"}
+        {"id":113,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"204 Brooks Ave Airport Next Right"}
+        {"id":114,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Exit 18A Brooks Ave East Exiting Right"}
+        {"id":114,    "lat":43.1273566, "lon":-77.6580468 ,    "type":"guid",    "value":"Brooks Ave East Exiting Right"}
+        
+       
+       {"id":113,    "lat": 43.1282254, "lon":-77.6589415,    "type":"warn",    "value":"Exit 40 Mile Per Hour"}
 	]
 }
