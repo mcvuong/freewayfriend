@@ -14,7 +14,7 @@
 		{"id":412, "lat":43.2038668, "lon":-77.6764899, "dir":"N","type":"guid", "value":"Exit 24A 104 East Ridge Rd"},
 		{"id":413, "lat":43.2038668, "lon":-77.6764899, "dir":"N","type":"guid", "value":"Exit 24B 104 West Ridge Rd Exit Only"},
 		{"id":414, "lat":43.2051036, "lon":-77.676235, "dir":"N","type":"guid", "value":"Exit 24A"},
-
+		{"id":415, "lat":43.2051036, "lon":-77.676235, "dir":"N","type":"guid", "value":"Exit 24A"}
 
 	]
 }
