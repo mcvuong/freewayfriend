@@ -1,47 +1,50 @@
 {
 	"data" : [
-		{"id":00,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid", "value":"I390 North Airport Greece"},
-		{"id":01,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"Exit 15"},
-		{"id":02,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester Irondequoit 3/4 Mile Exit Only"},
-		{"id":03,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"Brighton Henrietta Townline Road"},
-		{"id":04,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"Town of Brighton"},
+		{"id":50,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid", "value":"I390 North Airport Greece"},
+		{"id":51,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"Exit 15"},
+		{"id":52,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester Irondequoit 3/4 Mile Exit Only"},
+		{"id":53,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"Brighton Henrietta Townline Road"},
+		{"id":54,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"Town of Brighton"},
 		
-		{"id":05,	"lat":43.096028,	"lon":-77.601339,"dir":"N",	"type":"spdl", "value":"55"},
+		{"id":55,	"lat":43.096028,	"lon":-77.601339,"dir":"N",	"type":"spdl", "value":"55"},
 		
-		{"id":06,	"lat":43.097834,	"lon":-77.600763,"dir":"N",	"type":"guid", "value":"Emergency Detour E"},
-		{"id":07,	"lat":43.097834,	"lon":-77.600763,"dir":"N",	"type":"guid", "value":"Emergency Detour F"},
+		{"id":56,	"lat":43.097834,	"lon":-77.600763,"dir":"N",	"type":"guid", "value":"Emergency Detour E"},
+		{"id":57,	"lat":43.097834,	"lon":-77.600763,"dir":"N",	"type":"guid", "value":"Emergency Detour F"},
 
-		{"id":08,	"lat":43.098468,	"lon":-77.600572,"dir":"N",	"type":"spdl", "value":"55"},
+		{"id":58,	"lat":43.098468,	"lon":-77.600572,"dir":"N",	"type":"spdl", "value":"55"},
 
-		{"id":09,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid", "value":"Emergency Detour E"},
-		{"id":010,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid", "value":"I390 North Airport Greece"},
-		{"id":011,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid",	"value":"Exit 15"},
-		{"id":012,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester 1/4 Mile Exit Only"},
-		{"id":013,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid", "value":"Emergency Detour F"},
+		{"id":59,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid", "value":"Emergency Detour E"},
+		{"id":510,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid", "value":"I390 North Airport Greece"},
+		{"id":511,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid",	"value":"Exit 15"},
+		{"id":512,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester 1/4 Mile Exit Only"},
+		{"id":513,	"lat":43.103743,	"lon":-77.600179,"dir":"N",	"type":"guid", "value":"Emergency Detour F"},
 	
-		{"id":014,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid", "value":"Emergency Detour E"},
-		{"id":015,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid", "value":"I390 North Airport Greece Ramp 50 MPH"},
-		{"id":016,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid",	"value":"Exit 15"},
-		{"id":017,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester"},
-		{"id":018,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid", "value":"Emergency Detour F"},
+		{"id":514,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid", "value":"Emergency Detour E"},
+		{"id":515,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid", "value":"I390 North Airport Greece Ramp 50 MPH"},
+		{"id":516,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid",	"value":"Exit 15"},
+		{"id":517,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester"},
+		{"id":518,	"lat":43.106034,	"lon":-77.600132,"dir":"N",	"type":"guid", "value":"Emergency Detour F"},
 	
-		{"id":019,	"lat":43.107788,	"lon":-77.599702,"dir":"N",	"type":"guid", "value":"Exit 15"},
+		{"id":519,	"lat":43.107788,	"lon":-77.599702,"dir":"N",	"type":"guid", "value":"Exit 15"},
 
-		{"id":020,	"lat":43.110104,	"lon":-77.599862,"dir":"N",	"type":"guid", "value":"Exits 16 B-A"},
-		{"id":021,	"lat":43.110104,	"lon":-77.599862,"dir":"N",	"type":"guid", "value":"15A East Henrietta Road 15 West Henrietta Road 3/4 Mile"},
+		{"id":520,	"lat":43.110104,	"lon":-77.599862,"dir":"N",	"type":"guid", "value":"Exits 16 B-A"},
+		{"id":521,	"lat":43.110104,	"lon":-77.599862,"dir":"N",	"type":"guid", "value":"15A East Henrietta Road 15 West Henrietta Road 3/4 Mile"},
 
-		{"id":022,	"lat":43.110614,	"lon":-77.605903,"dir":"N",	"type":"guid", "value":"MCC U of R U of R Medical Center Exit 16A"},
+		{"id":522,	"lat":43.110614,	"lon":-77.605903,"dir":"N",	"type":"guid", "value":"MCC U of R U of R Medical Center Exit 16A"},
 
-		{"id":023,	"lat":43.109695,	"lon":-77.608753,"dir":"N",	"type":"guid", "value":"Exits 16 B-A"},
-		{"id":024,	"lat":43.109695,	"lon":-77.608753,"dir":"N",	"type":"guid", "value":"15A East Henrietta Road 15 West Henrietta Road Exit Only"},
+		{"id":523,	"lat":43.109695,	"lon":-77.608753,"dir":"N",	"type":"guid", "value":"Exits 16 B-A"},
+		{"id":524,	"lat":43.109695,	"lon":-77.608753,"dir":"N",	"type":"guid", "value":"15A East Henrietta Road 15 West Henrietta Road Exit Only"},
 
-		{"id":025,	"lat":43.109084,	"lon":-77.610191,"dir":"N",	"type":"spdl", "value":"55"},
+		{"id":525,	"lat":43.109084,	"lon":-77.610191,"dir":"N",	"type":"spdl", "value":"55"},
 
-		{"id":026,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"Exit 16A"},
-		{"id":027,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"15A South East Henrietta Road 15 West Henrietta Road Exit Only"},
+		{"id":526,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"Exit 16A"},
+		{"id":527,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"15A South East Henrietta Road 15 West Henrietta Road Exit Only"},
 
-		{"id":028,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"Exit 16B"},
-		{"id":029,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"15A North East Henrietta Road Rochester"}		
+		{"id":528,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"Exit 16B"},
+		{"id":529,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"15A North East Henrietta Road Rochester"},
+
+		{"id":529,	"lat":43.108264,	"lon":-77.612248,"dir":"N",	"type":"guid", "value":"Exit 16B"}		
+		
 
 	]
 }
