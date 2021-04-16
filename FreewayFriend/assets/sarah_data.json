@@ -43,8 +43,22 @@
 		{"id":528,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"Exit 16B"},
 		{"id":529,	"lat":43.108285,	"lon":-77.612230,"dir":"N",	"type":"guid", "value":"15A North East Henrietta Road Rochester"},
 
-		{"id":529,	"lat":43.108264,	"lon":-77.612248,"dir":"N",	"type":"guid", "value":"Exit 16B"}		
-		
+		{"id":529,	"lat":43.108264,	"lon":-77.612248,"dir":"N",	"type":"guid", "value":"Exit 16B"},
 
+		{"id":530,	"lat":43.1079036,	"lon":-77.6142665,"dir":"N", "type":"guid", "value":"Exit 16A"},
+		{"id":531,	"lat":43.1079036,	"lon":-77.6142665,"dir":"N", "type":"guid", "value":"U of R Medical Center MCC"},
+		
+		{"id":532,	"lat":43.1079857,	"lon":-77.6157063,"dir":"N",	"type":"guid", "value":"Exit 16A"},
+		{"id":533,	"lat":43.1079857,	"lon":-77.6157063,"dir":"N",	"type":"guid", "value":"15A South East Henrietta Road 15 West Henrietta Road Exit Only"},
+		{"id":534,	"lat":43.1079857,	"lon":-77.6157063,"dir":"N",	"type":"guid",	"value":"NY 15A Brighton"},
+
+		{"id":535,	"lat":43.108463,	"lon":-77.617467,"dir":"N",	"type":"guid", "value":"15 U of R Medical Center"},
+		{"id":536,	"lat":43.108463,	"lon":-77.617467,"dir":"N",	"type":"guid",	"value":"South 15A MCC"},
+		
+		{"id":537,	"lat":43.1160155,	"lon":-77.6325506,"dir":"N",	"type":"guid",	"value":"Kendrick Rd"},
+		
+		{"id":538,	"lat":43.1191933,	"lon":-77.6388798,"dir":"N",	"type":"guid", "value":"Exit 17"},
+		{"id":539,	"lat":43.1191933,	"lon":-77.6388798,"dir":"N",	"type":"guid", "value":"383 Scottsville Rd RIT 1/2 Mile"}
+		
 	]
 }
