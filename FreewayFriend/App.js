@@ -1,16 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Tts from 'react-native-tts';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Beep boop</Text>
       <StatusBar style="auto" />
     </View>
   );
 }
 
+// Tts.getInitStatus().then(() => {
+//   Tts.speak('Hello, world!');
+// });
 const styles = StyleSheet.create({
   container: {
     flex: 1,
