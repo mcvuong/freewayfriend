@@ -3,6 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Tts from 'react-native-tts';
 
+import * as signdata from './assets/ryan_data.json';
+
 export default function App() {
   return (
     <View style={styles.container}>
