@@ -4,7 +4,7 @@ import * as Speech from 'expo-speech'
 import * as Location from 'expo-location'
 import * as Permissions from 'expo-permissions'
 import Constants from 'expo-constants';
-import { Camera } from 'expo-camera';
+//import { Camera } from 'expo-camera';
  
 import * as signdata from './assets/all-data.json';
 import { setStatusBarHidden } from 'expo-status-bar'
@@ -17,8 +17,6 @@ export default class App extends React.Component{
         location:{latitude: 0,longitude: 0},
         geocode:null,
         errorMessage:"",
-        
-        
     }
 
     
@@ -61,7 +59,7 @@ export default class App extends React.Component{
               
               <View style = {styles.buttons}>
               <View style={{marginBottom: 10}}><Button title="Start" onPress={this.NativeSpeech}/></View>
-              <View style={{marginTop: 10}}><Button title="Repeat" /*onPress={this.NativeSpeech}*/ /*temporarily does nothing*//> </View>
+              {/* <View style={{marginTop: 10}}><Button title="Repeat" onPress={this.NativeSpeech} temporarily does nothing/> </View> */}
               </View>
               <View style={styles.box}>
                 <Text style={styles.textBox}>
