@@ -19,6 +19,8 @@ export default class App extends React.Component{
         previous:[],
         errorMessage:"",
     }
+
+    TTSqueue = [signs.data[0]];
     
     componentDidMount(){
       this.getLocationAsync()
@@ -50,8 +52,12 @@ export default class App extends React.Component{
     }
 
     //Checking TTS Queue
-    checkTTSQueue = async () =>{
-      //......Look at google doc
+    checkTTSQueue = async () => {
+      while(this.TTSqueue.length != 0){
+        Speech.speak(this.TTSqueue[0].value);
+        this.state.current = this.TTSqueue[0].value;
+        this.TTSqueue.splice(0,1);
+      }
     }
   
     //Speech Function
