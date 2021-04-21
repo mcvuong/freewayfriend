@@ -6,7 +6,7 @@ import * as Permissions from 'expo-permissions'
 import Constants from 'expo-constants';
 //import { Camera } from 'expo-camera';
  
-import * as signdata from './assets/all-data.json';
+import * as signs from './assets/all-data.json';
 import { setStatusBarHidden } from 'expo-status-bar'
 
 export default class App extends React.Component{  
@@ -15,10 +15,10 @@ export default class App extends React.Component{
     //Location Functions
     state= {
         location:{latitude: 0,longitude: 0},
-        geocode:null,
+        current:"",
+        previous:[],
         errorMessage:"",
     }
-
     
     componentDidMount(){
       this.getLocationAsync()
@@ -33,26 +33,31 @@ export default class App extends React.Component{
   
       let location = await Location.getCurrentPositionAsync({accuracy:Location.Accuracy.BestForNavigation});
       const { latitude , longitude } = location.coords
-      //this.getGeocodeAsync({latitude, longitude})
       this.setState({ location: {latitude, longitude}});
-  
     };
-    getGeocodeAsync= async (location) => {
-      let geocode = await Location.reverseGeocodeAsync(location, {useGoogleMaps:false})
-      this.setState({ geocode})
+
+    //Distance Function
+    getDistance = (xA, yA, xB, yB) =>{ 
+      var xDiff = xA - xB; 
+      var yDiff = yA - yB;
+      return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
+    }
+
+    //Checking Signs
+    signCheck = async () =>{
+      await this.getLocationAsync();
+      //......
     }
   
     //Speech Function
     NativeSpeech = async ()=> {
-            //const latitude = this.state.location.latitude
-            //const latitude = this.state.location.latitude
-        await this.getLocationAsync()
-        const { latitude , longitude } = this.state.location
+        await this.getLocationAsync();
+        const {latitude, longitude } = this.state.location;
         Speech.speak("Your coordinates are: " + latitude + ", " + longitude);
     };
 
     render(){ //Need to implement: https://docs.expo.io/versions/latest/sdk/camera/ but don't know how to yet
-        const {location,geocode, errorMessage } = this.state
+        const {location,current, previous, errorMessage } = this.state
         return (
             <View style={styles.container}>
               <View style={{marginBottom: 100}}><Button title="Home" onPress={this.NativeSpeech} /></View>
@@ -80,7 +85,6 @@ export default class App extends React.Component{
             </View>
           );
     }
-    
 }
 
 const styles = StyleSheet.create({
