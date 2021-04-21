@@ -1,5 +1,6 @@
 {
 	"data" : [
+		{"id":0,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"start", "value":"Let's hit the road"},
 		{"id":50,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid", "value":"I390 North Airport Greece"},
 		{"id":51,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"Exit 15"},
 		{"id":52,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester Irondequoit 3/4 Mile Exit Only"},
