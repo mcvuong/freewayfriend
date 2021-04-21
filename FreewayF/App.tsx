@@ -48,6 +48,11 @@ export default class App extends React.Component{
       await this.getLocationAsync();
       //......
     }
+
+    //Checking TTS Queue
+    checkTTSQueue = async () =>{
+      //......Look at google doc
+    }
   
     //Speech Function
     NativeSpeech = async ()=> {
