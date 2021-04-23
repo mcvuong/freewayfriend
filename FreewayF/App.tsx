@@ -16,12 +16,12 @@ export default class App extends React.Component{
     state= {
         location: {latitude: 0,longitude: 0},
         current: "",
-        previous: [],
-		signIndex: 0,
+        previous: [""],
+		    signIndex: 0,
         errorMessage: "",
     }
 
-	const THRESHOLD = 0.025;
+	  THRESHOLD = 0.025;
 
     TTSqueue = [signs.data[0]];
     
@@ -51,15 +51,15 @@ export default class App extends React.Component{
     //Checking Signs
     signCheck = async () => {
       await this.getLocationAsync();
-	  const {latitute, longitude} = this.state.location;
-	  for (int i = signIndex; i < signIndex + 20; ++i) {
-		  var s = signs.data[i];
-		  var d = this.getDistance(latitude, longitude, s.lat, s.lon);
-		  if (d < this.THRESHOLD) {
-			  this.TTSqueue.push(s);
-			  console.log("Added sign id " + s.id);
-			  ++this.state.signIndex;
-		  }
+      const {latitude, longitude} = this.state.location;
+      for (var i = this.state.signIndex; i < this.state.signIndex + 20; ++i) {
+        var s = signs.data[i];
+        var d = this.getDistance(latitude, longitude, s.lat, s.lon);
+        if (d < this.THRESHOLD) {
+          this.TTSqueue.push(s);
+          console.log("Added sign id " + s.id);
+          ++this.state.signIndex;
+        }
 	  }
     }
 
@@ -68,10 +68,10 @@ export default class App extends React.Component{
       while(this.TTSqueue.length != 0){
         Speech.speak(this.TTSqueue[0].value);
         this.state.current = this.TTSqueue[0].value;
-		this.state.previous.push(this.TTSqueue[0].value;
-		if (this.state.previous.length > 5) {
-			this.state.previous.splice(0,1);
-		}
+        this.state.previous.push(this.TTSqueue[0].value);
+        if (this.state.previous.length > 5) {
+          this.state.previous.splice(0,1);
+        }
         this.TTSqueue.splice(0,1);
       }
     }
@@ -80,7 +80,8 @@ export default class App extends React.Component{
     NativeSpeech = async () => {
         await this.getLocationAsync();
         const {latitude, longitude } = this.state.location;
-        Speech.speak("Your coordinates are: " + latitude + ", " + longitude);
+        //Speech.speak("Your coordinates are: " + latitude + ", " + longitude);
+        this.checkTTSQueue();
     };
 
     render(){ //Need to implement: https://docs.expo.io/versions/latest/sdk/camera/ but don't know how to yet
