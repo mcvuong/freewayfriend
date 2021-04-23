@@ -14,11 +14,14 @@ export default class App extends React.Component{
     //currently need: variables to contain current text/previous text and to overwrite whenever NativeSpeech is reached
     //Location Functions
     state= {
-        location:{latitude: 0,longitude: 0},
-        current:"",
-        previous:[],
-        errorMessage:"",
+        location: {latitude: 0,longitude: 0},
+        current: "",
+        previous: [],
+		signIndex: 0,
+        errorMessage: "",
     }
+
+	const THRESHOLD = 0.025;
 
     TTSqueue = [signs.data[0]];
     
@@ -39,16 +42,25 @@ export default class App extends React.Component{
     };
 
     //Distance Function
-    getDistance = (xA, yA, xB, yB) =>{ 
+    getDistance = (xA, yA, xB, yB) => { 
       var xDiff = xA - xB; 
       var yDiff = yA - yB;
       return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
     }
 
     //Checking Signs
-    signCheck = async () =>{
+    signCheck = async () => {
       await this.getLocationAsync();
-      //......
+	  const {latitute, longitude} = this.state.location;
+	  for (int i = signIndex; i < signIndex + 20; ++i) {
+		  var s = signs.data[i];
+		  var d = this.getDistance(latitude, longitude, s.lat, s.lon);
+		  if (d < this.THRESHOLD) {
+			  this.TTSqueue.push(s);
+			  console.log("Added sign id " + s.id);
+			  ++this.state.signIndex;
+		  }
+	  }
     }
 
     //Checking TTS Queue
@@ -56,12 +68,16 @@ export default class App extends React.Component{
       while(this.TTSqueue.length != 0){
         Speech.speak(this.TTSqueue[0].value);
         this.state.current = this.TTSqueue[0].value;
+		this.state.previous.push(this.TTSqueue[0].value;
+		if (this.state.previous.length > 5) {
+			this.state.previous.splice(0,1);
+		}
         this.TTSqueue.splice(0,1);
       }
     }
   
     //Speech Function
-    NativeSpeech = async ()=> {
+    NativeSpeech = async () => {
         await this.getLocationAsync();
         const {latitude, longitude } = this.state.location;
         Speech.speak("Your coordinates are: " + latitude + ", " + longitude);
