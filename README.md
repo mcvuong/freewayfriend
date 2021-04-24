@@ -28,8 +28,3 @@ Here are some links related to the Freeway Friend:
 - 2 = Ryan
 - 3 = Mary
 - 4 = Rui
-
-## Resources
-
-- Open phone webcam JS/React call: https://www.npmjs.com/package/react-html5-camera-photo
-
