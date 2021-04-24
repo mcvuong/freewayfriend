@@ -19,7 +19,6 @@ Taken from https://mutcd.fhwa.dot.gov/services/publications/fhwaop02084/index.ht
 
 Here are some links related to the Freeway Friend:
 - Link to website: https://rma104.wixsite.com/freewayfriend
-- Link to database used: https://www.mapillary.com/dataset/trafficsign
 - Link to promotional video: https://youtu.be/Uo59fo86g0c
 
 ## Number Assignments
