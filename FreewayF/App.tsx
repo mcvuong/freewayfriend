@@ -84,7 +84,7 @@ export default class App extends React.Component{
         this.checkTTSQueue();
     };
 
-    render(){ //Need to implement: https://docs.expo.io/versions/latest/sdk/camera/ but don't know how to yet
+    render(){ 
         const {location,current, previous, errorMessage } = this.state
         return (
             <View style={styles.container}>

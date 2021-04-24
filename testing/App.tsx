@@ -10,11 +10,8 @@ import * as Permissions from 'expo-permissions'
 import Constants from 'expo-constants';
  
 import * as signs from './assets/all-data.json';
-import { setStatusBarHidden } from 'expo-status-bar'
 
 import * as signdata from './assets/all-data.json';
-
-
 
 function HomeScreen({ navigation }) {
   return (
@@ -32,10 +29,10 @@ function DictationScreen({ navigation }) {
           <View><TouchableOpacity style={styles.button} /*onPress={this.NativeSpeech}*/><Text style={{color: 'white', fontWeight: 'bold'}}>START</Text></TouchableOpacity></View>
           <View><TouchableOpacity style={styles.button} /*onPress={this.NativeSpeech}*/><Text style={{color: 'white', fontWeight: 'bold'}}>REPEAT</Text></TouchableOpacity></View>
       </View>
-      <View style={{alignItems: 'center'}}>
-          <Text style={{fontWeight: 'bold',marginBottom:5}}>Current</Text>
+      <View style={{marginLeft: 40, marginRight: 40}}>
+          <Text style={{fontWeight: 'bold',marginBottom:5, textAlign: 'center'}}>Current</Text>
           <Text style={{marginBottom:20}}>Current sign temp. text, change with variable current or whatever later</Text>
-          <Text style={{fontWeight: 'bold',marginBottom:5}}>Previous</Text>
+          <Text style={{fontWeight: 'bold',marginBottom:5, textAlign: 'center'}}>Previous</Text>
           <Text>Previous sign temp. text, change with variable previous or whatever later</Text>
         </View>
     </View>
