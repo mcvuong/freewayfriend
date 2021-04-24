@@ -1,17 +1,12 @@
-import 'react-native-gesture-handler'
-import * as React from 'react'
-import { Image, Button, StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { Image, Button, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import * as Speech from 'expo-speech';
+import * as Location from 'expo-location';
+import * as Permissions from 'expo-permissions';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-import * as Speech from 'expo-speech'
-import * as Location from 'expo-location'
-import * as Permissions from 'expo-permissions'
-import Constants from 'expo-constants';
- 
 import * as signs from './assets/all-data.json';
-
-import * as signdata from './assets/all-data.json';
 
 const state = {
   location: {latitude: 0,longitude: 0},
@@ -117,19 +112,21 @@ function DictationScreen({ navigation }) {
 
 const Stack = createStackNavigator();
 
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Dictation" component={DictationScreen} />
-        <Stack.Screen name="Settings" component={SettingsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+export default function App(){
+  //render{
+    return (
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Dictation" component={DictationScreen} />
+          <Stack.Screen name="Settings" component={SettingsScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  //}
 }
 
-export default App;
+//export default App;
 
 const styles = StyleSheet.create({
   settings: {
