@@ -8,11 +8,31 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as signs from './assets/all-data.json';
 
+const testsigns = {
+	data: [
+		{"id":59,	"lat":1,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour E"},
+		{"id":510,	"lat":5,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"I390 North Airport Greece"},
+		{"id":511,	"lat":7,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"Exit 15"},
+		{"id":512,	"lat":14,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester 1/4 Mile Exit Only"},
+		{"id":513,	"lat":18,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour F"},
+		{"id":514,	"lat":26,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour E"},
+		{"id":515,	"lat":29,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"I390 North Airport Greece Ramp 50 MPH"},
+		{"id":516,	"lat":38,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"Exit 15"},
+		{"id":517,	"lat":43,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester"},
+		{"id":518,	"lat":50,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour F"},
+		{"id":519,	"lat":52,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Exit 15"},
+		{"id":520,	"lat":57,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Exits 16 B-A"},
+		{"id":521,	"lat":62,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"15A East Henrietta Road 15 West Henrietta Road 3/4 Mile"},
+		{"id":522,	"lat":66,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"MCC U of R U of R Medical Center Exit 16A"}
+	]
+}
+
 const state = {
-  location: {latitude: 0,longitude: 0},
+  loc: {latitude: 0, longitude: 0},
+  testloc:	{latitude: 0, longitude: -77.6},
   current: "",
   previous: [""],
-  signIndex: 0,
+  signIndex: 1,
   errorMessage: "",
 }
 
@@ -29,9 +49,9 @@ async function getLocationAsync () {
     state.errorMessage = 'Permission to access location was denied';
   }
 
-  let location = await Location.getCurrentPositionAsync({accuracy:Location.Accuracy.BestForNavigation});
-  const { latitude , longitude } = location.coords
-  state.location = {latitude, longitude}};
+  let loc = await Location.getCurrentPositionAsync({accuracy:Location.Accuracy.BestForNavigation});
+  const { latitude , longitude } = loc.coords
+  state.loc = {latitude, longitude}};
 
 //Distance Function
 function getDistance (xA, yA, xB, yB) { 
@@ -42,15 +62,21 @@ function getDistance (xA, yA, xB, yB) {
 
 async function signCheck () {
   await getLocationAsync();
-  const {latitude, longitude} = state.location;
-  for (var i = state.signIndex; i < state.signIndex + 20; ++i) {
-    var s = signs.data[i];
+  //state.testloc.latitude += Math.random() * 0.05
+  const {latitude, longitude} = state.loc;
+  for (var i = state.signIndex; i < state.signIndex + 2 && i < signs.data.length; ++i) {
+    var s = testsigns.data[i];
     var d = getDistance(latitude, longitude, s.lat, s.lon);
+	var found = false;
     if (d < THRESHOLD) {
       TTSqueue.push(s);
       console.log("Added sign id " + s.id);
       ++state.signIndex;
+	  found = true;
     }
+	if (found == true) {
+		checkTTSQueue();
+	}
   }
 }
 
@@ -67,10 +93,16 @@ async function checkTTSQueue () {
   }
 }
 
+// Start checking for signs every 0.2 seconds
+async function StartDict () {
+	console.log("Dictation Started");
+	setInterval(signCheck, 200);
+}
+
 //Speech Function
 async function NativeSpeech () {
   await getLocationAsync();
-  const {latitude, longitude } = state.location;
+  const {latitude, longitude } = state.loc;
   //Speech.speak("Your coordinates are: " + latitude + ", " + longitude);
   checkTTSQueue();
 };
@@ -79,7 +111,7 @@ function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', marginTop: 50}}>
       <View style={styles.tinyLogo}><Image style={styles.image} source={require('./assets/adaptive-icon.png',)} /></View>
-      <View><TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Dictation')}><Text style={{color: 'white', fontWeight: 'bold'}}>START</Text></TouchableOpacity></View>
+      <View><TouchableOpacity style={styles.button} onPress={() => {StartDict(); navigation.navigate('Dictation')}}><Text style={{color: 'white', fontWeight: 'bold'}}>START</Text></TouchableOpacity></View>
       <View><TouchableOpacity style={styles.settings} onPress={() => navigation.navigate('Settings')}><Text style={{color: 'white', fontWeight: 'bold'}}>SETTINGS</Text></TouchableOpacity></View>
     </View>
   );
@@ -91,6 +123,10 @@ function SettingsScreen({ navigation }) {
      
     </View>
   );
+}
+
+async function displayCurrent() {
+	return state.current;
 }
 
 function DictationScreen({ navigation }) {
