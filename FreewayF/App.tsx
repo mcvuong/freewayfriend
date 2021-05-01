@@ -122,12 +122,12 @@ function changeText () {
   }
   else state.start  = "START";
 }
-=======
+	      
 // Repeat Function
 async function RepeatLast() {
 	Speech.speak(state.current);
 };
->>>>>>> 87a6cefc48cfdfdbc5bec23786e0cf5b95c2a694
+
 
 function HomeScreen({ navigation }) {
   return (
@@ -151,13 +151,10 @@ function DictationScreen({ navigation }) {
   return (
     <View style={{ flex: 1, marginLeft: 20, marginRight: 20, marginTop: 50}}> 
       <View style={{marginBottom: 50}}>
-<<<<<<< HEAD
           <View><TouchableOpacity style={styles.button} onPress={NativeSpeech}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>{state.start}</Text></TouchableOpacity></View>
           <View><TouchableOpacity style={styles.button} /*onPress={this.NativeSpeech}*/><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>REPEAT</Text></TouchableOpacity></View>
-=======
           <View><TouchableOpacity style={styles.button} onPress={NativeSpeech}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>START</Text></TouchableOpacity></View>
           <View><TouchableOpacity style={styles.button} onPress={RepeatLast}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>REPEAT</Text></TouchableOpacity></View>
->>>>>>> 87a6cefc48cfdfdbc5bec23786e0cf5b95c2a694
       </View>
       <View style={{marginLeft: 15, marginRight: 15}}>
           <Text style={{fontWeight: 'bold', fontSize: 25, marginBottom:5, textAlign: 'center'}}>Current</Text>
