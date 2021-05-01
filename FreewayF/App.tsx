@@ -83,7 +83,7 @@ async function signCheck () {
 //Checking TTS Queue
 async function checkTTSQueue () {
   while(TTSqueue.length != 0){
-	q = TTSqueue[0];
+	var q = TTSqueue[0];
 	if (q.type != "spdl") {
 		Speech.speak(q.value);
 	} else {
@@ -95,6 +95,7 @@ async function checkTTSQueue () {
       state.previous.splice(0,1);
     }
     TTSqueue.splice(0,1);
+  DictationScreen({navigation:null});
   }
 }
 

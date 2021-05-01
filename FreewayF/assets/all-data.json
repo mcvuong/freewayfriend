@@ -1,6 +1,6 @@
 {
 	"data" : [
-		{"id":0,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"start", "value":"Let's hit the road"},
+		{"id":0,	"lat":43.095080,	"lon":-77.601662,"dir":"N",	"type":"start", "value":"Let's hit the road!"},
         
 		{"id":60,	"lat":43.0829771,	"lon":-77.6102911,"dir":"N",	"type":"guid", "value":"Exit 14"},
 		{"id":61,	"lat":43.0839087,	"lon":-77.6082908,"dir":"N",	"type":"guid", "value":"NY 15A Henrietta"},
