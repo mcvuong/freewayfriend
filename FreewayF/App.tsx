@@ -36,7 +36,7 @@ const state = {
   errorMessage: "",
 }
 
-const THRESHOLD = 0.025;
+const THRESHOLD = 0.150;
 const TTSqueue = [signs.data[0]];
 
 function componentDidMount(){
@@ -83,9 +83,14 @@ async function signCheck () {
 //Checking TTS Queue
 async function checkTTSQueue () {
   while(TTSqueue.length != 0){
-    Speech.speak(TTSqueue[0].value);
+	q = TTSqueue[0];
+	if (q.type != "spdl") {
+		Speech.speak(q.value);
+	} else {
+		Speech.speak("Speed Limit: " + q.value);
+	}
     state.previous.push(state.current);
-    state.current = TTSqueue[0].value;
+    state.current = q.value;
     if (state.previous.length > 5) {
       state.previous.splice(0,1);
     }
@@ -125,10 +130,6 @@ function SettingsScreen({ navigation }) {
   );
 }
 
-async function displayCurrent() {
-	return state.current;
-}
-
 function DictationScreen({ navigation }) {
   return (
     <View style={{ flex: 1, marginLeft: 20, marginRight: 20, marginTop: 50}}> 
@@ -138,9 +139,9 @@ function DictationScreen({ navigation }) {
       </View>
       <View style={{marginLeft: 15, marginRight: 15}}>
           <Text style={{fontWeight: 'bold', fontSize: 25, marginBottom:5, textAlign: 'center'}}>Current</Text>
-          <Text style={{marginBottom:20, fontSize: 20}}>{state.current}</Text>
+          <Text style={{marginBottom:20, fontSize: 20}}> {state.current} </Text>
           <Text style={{fontWeight: 'bold', marginBottom:5, fontSize: 25, textAlign: 'center'}}>Previous</Text>
-          <Text style= {{fontSize: 20}}>{state.previous}</Text>
+          <Text style= {{fontSize: 20}}> {state.previous[0]} </Text>
         </View>
     </View>
   );
