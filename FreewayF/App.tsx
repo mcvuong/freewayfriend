@@ -90,10 +90,10 @@ async function checkTTSQueue () {
 	} else {
 		Speech.speak("Speed Limit: " + q.value);
 	}
-    state.previous.push(state.current);
+    state.previous.unshift(state.current);
     state.current = q.value;
     if (state.previous.length > 5) {
-      state.previous.splice(0,1);
+      state.previous.pop();
     }
     TTSqueue.splice(0,1);
   DictationScreen({navigation:null});
@@ -115,12 +115,19 @@ async function NativeSpeech () {
   checkTTSQueue();
 };
 
+<<<<<<< HEAD
 function changeText () {
   if (state.start. match("START")) {
       state.start = "DICTATING...";
   }
   else state.start  = "START";
 }
+=======
+// Repeat Function
+async function RepeatLast() {
+	Speech.speak(state.current);
+};
+>>>>>>> 87a6cefc48cfdfdbc5bec23786e0cf5b95c2a694
 
 function HomeScreen({ navigation }) {
   return (
@@ -144,14 +151,19 @@ function DictationScreen({ navigation }) {
   return (
     <View style={{ flex: 1, marginLeft: 20, marginRight: 20, marginTop: 50}}> 
       <View style={{marginBottom: 50}}>
+<<<<<<< HEAD
           <View><TouchableOpacity style={styles.button} onPress={NativeSpeech}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>{state.start}</Text></TouchableOpacity></View>
           <View><TouchableOpacity style={styles.button} /*onPress={this.NativeSpeech}*/><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>REPEAT</Text></TouchableOpacity></View>
+=======
+          <View><TouchableOpacity style={styles.button} onPress={NativeSpeech}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>START</Text></TouchableOpacity></View>
+          <View><TouchableOpacity style={styles.button} onPress={RepeatLast}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>REPEAT</Text></TouchableOpacity></View>
+>>>>>>> 87a6cefc48cfdfdbc5bec23786e0cf5b95c2a694
       </View>
       <View style={{marginLeft: 15, marginRight: 15}}>
           <Text style={{fontWeight: 'bold', fontSize: 25, marginBottom:5, textAlign: 'center'}}>Current</Text>
           <Text style={{marginBottom:20, fontSize: 20}}> {state.current} </Text>
           <Text style={{fontWeight: 'bold', marginBottom:5, fontSize: 25, textAlign: 'center'}}>Previous</Text>
-          <Text style= {{fontSize: 20}}> {state.previous[0]} </Text>
+          <Text style={{fontSize: 20}}> {state.previous} </Text>
         </View>
     </View>
   );
