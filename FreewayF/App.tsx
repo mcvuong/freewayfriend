@@ -115,7 +115,7 @@ async function NativeSpeech () {
 
 // Repeat Function
 async function RepeatLast() {
-	Speech.speak(state.previous[0]);
+	Speech.speak(state.current);
 };
 
 function HomeScreen({ navigation }) {
