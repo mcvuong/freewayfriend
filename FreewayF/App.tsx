@@ -115,7 +115,6 @@ async function NativeSpeech () {
   checkTTSQueue();
 };
 
-<<<<<<< HEAD
 function changeText () {
   if (state.start. match("START")) {
       state.start = "DICTATING...";
