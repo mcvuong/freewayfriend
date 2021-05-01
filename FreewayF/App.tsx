@@ -34,6 +34,7 @@ const state = {
   previous: [""],
   signIndex: 1,
   errorMessage: "",
+  start: "START"
 }
 
 const THRESHOLD = 0.150;
@@ -107,18 +108,26 @@ async function StartDict () {
 
 //Speech Function
 async function NativeSpeech () {
+  changeText();
   await getLocationAsync();
   const {latitude, longitude } = state.loc;
   //Speech.speak("Your coordinates are: " + latitude + ", " + longitude);
   checkTTSQueue();
 };
 
+function changeText () {
+  if (state.start. match("START")) {
+      state.start = "DICTATING...";
+  }
+  else state.start  = "START";
+}
+
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', marginTop: 50}}>
       <View style={styles.tinyLogo}><Image style={styles.image} source={require('./assets/adaptive-icon.png',)} /></View>
       <View><TouchableOpacity style={styles.button} onPress={() => {StartDict(); navigation.navigate('Dictation')}}><Text style={{color: 'white', fontWeight: 'bold'}}>START</Text></TouchableOpacity></View>
-      <View><TouchableOpacity style={styles.settings} onPress={() => navigation.navigate('Settings')}><Text style={{color: 'white', fontWeight: 'bold'}}>SETTINGS</Text></TouchableOpacity></View>
+      {/*<View><TouchableOpacity style={styles.settings} onPress={() => navigation.navigate('Settings')}><Text style={{color: 'white', fontWeight: 'bold'}}>SETTINGS</Text></TouchableOpacity></View>*/}
     </View>
   );
 }
@@ -135,7 +144,7 @@ function DictationScreen({ navigation }) {
   return (
     <View style={{ flex: 1, marginLeft: 20, marginRight: 20, marginTop: 50}}> 
       <View style={{marginBottom: 50}}>
-          <View><TouchableOpacity style={styles.button} onPress={NativeSpeech}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>START</Text></TouchableOpacity></View>
+          <View><TouchableOpacity style={styles.button} onPress={NativeSpeech}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>{state.start}</Text></TouchableOpacity></View>
           <View><TouchableOpacity style={styles.button} /*onPress={this.NativeSpeech}*/><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>REPEAT</Text></TouchableOpacity></View>
       </View>
       <View style={{marginLeft: 15, marginRight: 15}}>
