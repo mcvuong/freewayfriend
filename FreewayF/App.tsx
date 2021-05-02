@@ -8,24 +8,24 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as signs from './assets/all-data.json';
 
-const testsigns = {
-	data: [
-		{"id":59,	"lat":1,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour E"},
-		{"id":510,	"lat":5,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"I390 North Airport Greece"},
-		{"id":511,	"lat":7,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"Exit 15"},
-		{"id":512,	"lat":14,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester 1/4 Mile Exit Only"},
-		{"id":513,	"lat":18,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour F"},
-		{"id":514,	"lat":26,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour E"},
-		{"id":515,	"lat":29,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"I390 North Airport Greece Ramp 50 MPH"},
-		{"id":516,	"lat":38,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"Exit 15"},
-		{"id":517,	"lat":43,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester"},
-		{"id":518,	"lat":50,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour F"},
-		{"id":519,	"lat":52,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Exit 15"},
-		{"id":520,	"lat":57,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Exits 16 B-A"},
-		{"id":521,	"lat":62,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"15A East Henrietta Road 15 West Henrietta Road 3/4 Mile"},
-		{"id":522,	"lat":66,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"MCC U of R U of R Medical Center Exit 16A"}
-	]
-}
+// const testsigns = {
+// 	data: [
+// 		{"id":59,	"lat":1,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour E"},
+// 		{"id":510,	"lat":5,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"I390 North Airport Greece"},
+// 		{"id":511,	"lat":7,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"Exit 15"},
+// 		{"id":512,	"lat":14,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester 1/4 Mile Exit Only"},
+// 		{"id":513,	"lat":18,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour F"},
+// 		{"id":514,	"lat":26,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour E"},
+// 		{"id":515,	"lat":29,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"I390 North Airport Greece Ramp 50 MPH"},
+// 		{"id":516,	"lat":38,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"Exit 15"},
+// 		{"id":517,	"lat":43,	"lon":-77.6,	"dir":"N",	"type":"guid",	"value":"I590 North Downtown Rochester"},
+// 		{"id":518,	"lat":50,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Emergency Detour F"},
+// 		{"id":519,	"lat":52,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Exit 15"},
+// 		{"id":520,	"lat":57,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"Exits 16 B-A"},
+// 		{"id":521,	"lat":62,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"15A East Henrietta Road 15 West Henrietta Road 3/4 Mile"},
+// 		{"id":522,	"lat":66,	"lon":-77.6,	"dir":"N",	"type":"guid",  "value":"MCC U of R U of R Medical Center Exit 16A"}
+// 	]
+// }
 
 const state = {
   loc: {latitude: 0, longitude: 0},
@@ -38,7 +38,7 @@ const state = {
   permissions: "undecided"
 }
 
-const THRESHOLD = 0.150;
+const THRESHOLD = 0.0950;
 const TTSqueue = [signs.data[0]];
 
 async function componentDidMount(){
@@ -83,7 +83,7 @@ async function signCheck () {
   //state.testloc.latitude += Math.random() * 0.05
   const {latitude, longitude} = state.loc;
   for (var i = state.signIndex; i < state.signIndex + 2 && i < signs.data.length; ++i) {
-    var s = testsigns.data[i];
+    var s = signs.data[i];
     var d = getDistance(latitude, longitude, s.lat, s.lon);
 	var found = false;
     if (d < THRESHOLD) {
