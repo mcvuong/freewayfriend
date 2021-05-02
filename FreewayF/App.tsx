@@ -35,47 +35,53 @@ const state = {
   signIndex: 1,
   errorMessage: "",
   start: "START",
-  permissions: "undecided"
+  //permissions: "undecided"
 }
 
-const THRESHOLD = 0.0950;
+const THRESHOLD = 0.0035;
 const TTSqueue = [signs.data[0]];
 
 async function componentDidMount(){
-  await perm();
+  //await perm();
 
   getLocationAsync();
 }
 
-async function perm(){
-  try{let { status } = await Location.requestForegroundPermissionsAsync();
-  //let { status } =  Permissions.askAsync(Permissions.LOCATION);
+// async function perm(){
+//   try{let { status } = await Location.requestForegroundPermissionsAsync();
+//   //let { status } =  Permissions.askAsync(Permissions.LOCATION);
+//   if (status !== 'granted') {
+//     state.errorMessage = 'Permission to access location was denied';
+//   }else{
+//     state.permissions = 'granted';
+//   }
+// }catch(error){
+//     console.error(error);
+//   }
+// }
+async function getLocationAsync () {
+  let { status } = await Permissions.askAsync(Permissions.LOCATION);
   if (status !== 'granted') {
     state.errorMessage = 'Permission to access location was denied';
-  }else{
-    state.permissions = 'granted';
   }
-}catch(error){
-    console.error(error);
-  }
-}
-async function getLocationAsync () {
-  // let { status } = await Permissions.askAsync(Permissions.LOCATION);
-  // if (status !== 'granted') {
-  //   state.errorMessage = 'Permission to access location was denied';
+  
+  // if(state.permissions !== 'granted'){
+  //   return;
   // }
-  if(state.permissions !== 'granted'){
-    return;
-  }
+
   let loc = await Location.getCurrentPositionAsync({accuracy:Location.Accuracy.BestForNavigation});
   const { latitude , longitude } = loc.coords
-  state.loc = {latitude, longitude}};
+  state.loc = {latitude, longitude}
+};
 
 //Distance Function
 function getDistance (xA, yA, xB, yB) { 
+  // console.log("xA: " + xA + "  yA: " + yA);
+  // console.log("xB: " + xB + "  yB: " + yB);
   var xDiff = xA - xB; 
   var yDiff = yA - yB;
-  return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
+  //console.log("x: " + xDiff + "  y: " + yDiff);
+  return Math.sqrt((xDiff * xDiff) + (yDiff * yDiff));
 }
 
 async function signCheck () {
@@ -85,12 +91,13 @@ async function signCheck () {
   for (var i = state.signIndex; i < state.signIndex + 2 && i < signs.data.length; ++i) {
     var s = signs.data[i];
     var d = getDistance(latitude, longitude, s.lat, s.lon);
+    console.log("Dist: " + d);
 	var found = false;
     if (d < THRESHOLD) {
+      found = true;
       TTSqueue.push(s);
       console.log("Added sign id " + s.id);
-      ++state.signIndex;
-	  found = true;
+      ++state.signIndex; 
     }
 	if (found == true) {
 		checkTTSQueue();
@@ -168,13 +175,13 @@ function DictationScreen({ navigation }) {
     <View style={{ flex: 1, marginLeft: 20, marginRight: 20, marginTop: 20}}> 
       <View style={{marginBottom: 50}}>
           <View><TouchableOpacity style={styles.button} onPress={NativeSpeech}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>{state.start}</Text></TouchableOpacity></View>
-          <View><TouchableOpacity style={styles.button} onPress={RepeatLast}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>REPEAT</Text></TouchableOpacity></View>
+          <View><TouchableOpacity style={styles.button} onPress={NativeSpeech}><Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>REPEAT</Text></TouchableOpacity></View>
       </View>
       <View style={{marginLeft: 15, marginRight: 15}}>
-          <Text style={{fontWeight: 'bold', fontSize: 25, marginBottom:5, textAlign: 'center'}}>Current</Text>
+          {/* <Text style={{fontWeight: 'bold', fontSize: 25, marginBottom:5, textAlign: 'center'}}>Current</Text>
           <Text style={{marginBottom:20, fontSize: 20}}> {state.current} </Text>
           <Text style={{fontWeight: 'bold', marginBottom:5, fontSize: 25, textAlign: 'center'}}>Previous</Text>
-          <Text style={{fontSize: 20}}> {state.previous} </Text>
+          <Text style={{fontSize: 20}}> {state.previous} </Text> */}
         </View>
     </View>
   );
