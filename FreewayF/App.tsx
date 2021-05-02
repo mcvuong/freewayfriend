@@ -34,22 +34,39 @@ const state = {
   previous: [""],
   signIndex: 1,
   errorMessage: "",
-  start: "START"
+  start: "START",
+  permissions: "undecided"
 }
 
 const THRESHOLD = 0.150;
 const TTSqueue = [signs.data[0]];
 
-function componentDidMount(){
+async function componentDidMount(){
+  await perm();
+
   getLocationAsync();
 }
 
-async function getLocationAsync () {
-  let { status } = await Permissions.askAsync(Permissions.LOCATION);
+async function perm(){
+  try{let { status } = await Location.requestForegroundPermissionsAsync();
+  //let { status } =  Permissions.askAsync(Permissions.LOCATION);
   if (status !== 'granted') {
     state.errorMessage = 'Permission to access location was denied';
+  }else{
+    state.permissions = 'granted';
   }
-
+}catch(error){
+    console.error(error);
+  }
+}
+async function getLocationAsync () {
+  // let { status } = await Permissions.askAsync(Permissions.LOCATION);
+  // if (status !== 'granted') {
+  //   state.errorMessage = 'Permission to access location was denied';
+  // }
+  if(state.permissions !== 'granted'){
+    return;
+  }
   let loc = await Location.getCurrentPositionAsync({accuracy:Location.Accuracy.BestForNavigation});
   const { latitude , longitude } = loc.coords
   state.loc = {latitude, longitude}};
